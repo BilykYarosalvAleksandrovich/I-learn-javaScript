@@ -132,3 +132,19 @@
 // for (let i = 0; i < films.length; i++) {
 //   console.log(`Я люблю фільм: ${films[i]}`);
 // }
+
+const book = {
+  title: 'Собака Баскервіля',
+  author: 'Konane Doile',
+  yearOfPublication: '2025',
+  genre: 'детективи',
+  isBestseller: true,
+};
+
+console.log(book.title);
+console.log(book.author);
+console.log(book.genre);
+console.log(book);
+console.log(
+  `Назва: ${book.title}, Жанр: ${book.genre}, Автор: ${book.author}, Рік виходу книги: ${book.yearOfPublication}`
+);
