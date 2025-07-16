@@ -107,13 +107,28 @@
 // const bmi = calcBMI({ w: '88,3', h: '1.75' });
 // console.log(bmi);
 
-function greet(name, age) {
-  if (age >= 18) {
-    return `Привіт, ${name}. Ти дорослий.`;
-  } else {
-    return `Привіт, ${name}. Ти ще неповнолітній.`;
-  }
-}
+// function greet(name, age) {
+//   if (age >= 18) {
+//     return `Привіт, ${name}. Ти дорослий.`;
+//   } else {
+//     return `Привіт, ${name}. Ти ще неповнолітній.`;
+//   }
+// }
 
-const message = greet('Yaroslav', 34);
-console.log(message);
+// const message = greet('Yaroslav', 34);
+// console.log(message);
+
+// const films = ['Batman', 'Superman', 'Wonderwomen', 'Aquaman'];
+
+// console.log(films[0]);
+// console.log(films[films.length - 1]);
+
+// films.push('Anakonda');
+// console.log(films);
+
+// films.pop();
+// console.log(films);
+
+// for (let i = 0; i < films.length; i++) {
+//   console.log(`Я люблю фільм: ${films[i]}`);
+// }
