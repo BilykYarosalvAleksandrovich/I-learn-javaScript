@@ -133,18 +133,81 @@
 //   console.log(`Я люблю фільм: ${films[i]}`);
 // }
 
-const book = {
-  title: 'Собака Баскервіля',
-  author: 'Konane Doile',
-  yearOfPublication: '2025',
-  genre: 'детективи',
-  isBestseller: true,
-};
+// const book = {
+//   title: 'Собака Баскервіля',
+//   author: 'Konane Doile',
+//   yearOfPublication: 2025,
+//   genre: 'детективи',
+//   isBestseller: true,
+// };
 
-console.log(book.title);
-console.log(book.author);
-console.log(book.genre);
-console.log(book);
-console.log(
-  `Назва: ${book.title}, Жанр: ${book.genre}, Автор: ${book.author}, Рік виходу книги: ${book.yearOfPublication}`
+// console.log(book.title);
+// console.log(book.author);
+// console.log(book.genre);
+// console.log(book);
+// console.log(
+//   `Назва: ${book.title}, Жанр: ${book.genre}, Автор: ${book.author}, Рік виходу книги: ${book.yearOfPublication}`
+// );
+
+// const book = {
+//   title: 'Собака Баскервіля',
+//   author: 'Konane Doile',
+//   yearOfPublication: 2025,
+//   genre: 'детективи',
+//   describe() {
+//     console.log(
+//       `Назва: ${this.title}, Жанр: ${this.genre}, Автор: ${this.author}, Рік виходу книги: ${this.yearOfPublication}`
+//     );
+//   },
+// };
+
+// book.describe();
+// let clientCounter = 23;
+// const maxClients = 25;
+
+// while (clientCounter < maxClients) {
+//   console.log(clientCounter);
+//   clientCounter += 1;
+// }
+
+class Book {
+  constructor(title, author, year, genre) {
+    this.title = title;
+    this.author = author;
+    this.yearOfPublication = year;
+    this.genre = genre;
+  }
+
+  describe() {
+    console.log(
+      `Книга "${this.title}" (${this.genre}) автора ${this.author}, ${this.yearOfPublication} рік.`
+    );
+  }
+  isClassic() {
+    return this.yearOfPublication < 2000;
+  }
+}
+
+const book1 = new Book('1984', 'George Orwell', 1949, 'антиутопія');
+const book2 = new Book('Собака Баскервіля', 'Konane Doile', 2025, 'детектив');
+const book3 = new Book('Навчитися вчити', 'Барбара Оклі', 2008, 'психологія');
+const book4 = new Book(
+  'Godfather',
+  'Mario Puzo',
+  1960,
+  'триллер, детектив, драма'
 );
+
+const library = [book1, book2, book3, book4];
+
+function printLibrary(library) {
+  for (const book of library) {
+    book.describe();
+    if (book.isClassic()) {
+      console.log('Класика: Так\n');
+    } else {
+      console.log('Класика:  Ні\n');
+    }
+  }
+}
+printLibrary(library);
