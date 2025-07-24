@@ -170,50 +170,118 @@
 //   clientCounter += 1;
 // }
 
-class Book {
-  constructor(title, author, year, genre) {
-    this.title = title;
-    this.author = author;
-    this.yearOfPublication = year;
-    this.genre = genre;
-  }
+// class Book {
+//   constructor(title, author, year, genre) {
+//     this.title = title;
+//     this.author = author;
+//     this.yearOfPublication = year;
+//     this.genre = genre;
+//   }
 
-  describe() {
-    console.log(
-      `Книга "${this.title}" (${this.genre}) автора ${this.author}, ${this.yearOfPublication} рік.`
-    );
-  }
-  isClassic() {
-    return this.yearOfPublication < 2000;
-  }
-}
+//   describe() {
+//     console.log(
+//       `Книга "${this.title}" (${this.genre}) автора ${this.author}, ${this.yearOfPublication} рік.`
+//     );
+//   }
+//   isClassic() {
+//     return this.yearOfPublication < 2000;
+//   }
+// }
 
-const book1 = new Book('1984', 'George Orwell', 1949, 'антиутопія');
-const book2 = new Book('Собака Баскервіля', 'Konane Doile', 2025, 'детектив');
-const book3 = new Book('Навчитися вчити', 'Барбара Оклі', 2008, 'психологія');
-const book4 = new Book(
-  'Godfather',
-  'Mario Puzo',
-  1960,
-  'триллер, детектив, драма'
-);
+// const book1 = new Book('1984', 'George Orwell', 1949, 'антиутопія');
+// const book2 = new Book('Собака Баскервіля', 'Konane Doile', 2025, 'детектив');
+// const book3 = new Book('Навчитися вчити', 'Барбара Оклі', 2008, 'психологія');
+// const book4 = new Book(
+//   'Godfather',
+//   'Mario Puzo',
+//   1960,
+//   'триллер, детектив, драма'
+// );
 
-const library = [book1, book2, book3, book4];
+// const library = [book1, book2, book3, book4];
 
-function printLibrary(library) {
-  for (const book of library) {
-    book.describe();
-    if (book.isClassic()) {
-      console.log('Класика: Так\n');
-    } else {
-      console.log('Класика:  Ні\n');
-    }
-  }
-}
-printLibrary(library);
+// function printLibrary(library) {
+//   for (const book of library) {
+//     book.describe();
+//     if (book.isClassic()) {
+//       console.log('Класика: Так\n');
+//     } else {
+//       console.log('Класика:  Ні\n');
+//     }
+//   }
+// }
+// printLibrary(library);
 
-const planets = ['Earth', 'Mars', 'Venus'];
+// const planets = ['Earth', 'Mars', 'Venus'];
 
-for (let i = 0; i < planets.length; i += 1) {
-  console.log(planets[i]);
-}
+// for (let i = 0; i < planets.length; i += 1) {
+//   console.log(planets[i]);
+// }
+// напиши функцію add для складання довільної кількості аргументів (чисел)
+
+// function add() {
+//   const arr = Array.from(arguments);
+//   let sum = 0;
+
+//   for (const number of arr) {
+//     sum += number;
+//   }
+//   return sum;
+// }
+// console.log(add(1, 6, 7, 10));
+
+// напиши функцію calAvarage() яка приймає довільну кількість аргументів і повертає їхнє
+// середнє значення. Усі аргументи будуть лише числами.
+
+// function calAvarage() {
+//   const arr = Array.from(arguments);
+//   let sum = 0;
+//   for (let i = 0; i < arguments.length; i++) {
+//     sum += arguments[i];
+//   }
+//   return sum / arguments.length;
+//   // const avarage = sum / arguments.length;
+//   // return avarage;
+// }
+// console.log(calAvarage(5, 9, 15, 20));
+
+// Напиши функцію LogItems(items), яка отримує масив та використовує цикл, який для кожного елемента масиву
+// буде виводити в консоль повідомлення у форматі <номер елемента> - <значення елемента>. Нумерація елементів повинна починатися з 1.
+
+// Наприклад для першого елемента масиву ['Mango', 'Poly', 'Ajax'] з індексом 0 буде виведено 1 - Mango, а для індексу 2 виведе 3 - Ajax.
+
+// function logItems(items) {
+//   for (let i = 0; i < items.length; i++) {
+//     console.log(`${i + 1} - ${items[i]}`);
+//   }
+// }
+// logItems(['Mango', 'Poly', 'Ajax']);
+
+// напиши функцію printInfo(names, phones) яка виводить у консоль ім'я та телефонний номер користувача. У параметри names та phones
+// будуть передані рядки імен та телефонних номерів, розділені комами. Порядковий номер імен та телефонів у рядках вказують на відповідність.
+// Кількість імен та телефонів гарантовано однакова.
+
+// function printInfo(names, phones) {
+//   const namesArr = names.split(',');
+//   const phonesArr = phones.split(',');
+//   for (let i = 0; i < namesArr.length; i++) {
+//     console.log(`${namesArr[i]} - ${phonesArr[i]}`);
+//   }
+// }
+// printInfo(
+//   'Yaroslav,Weronika,Klichko,Wallsh',
+//   '999999999999,8888888888,7777777777,55555555555'
+// );
+
+// напиши функцію formatTime(minutes) яка переведе значення minutes (кількість хвилин) у рядок у форматі годин та хвилин HH:MM.
+
+// function formatTime(min) {
+//   const houers = Math.floor(min / 60);
+//   const minutes = min % 60;
+//   const doubleHouers = String(houers).padStart(2, 0);
+//   const doubleMinutes = String(minutes).padStart(2, 0);
+//   console.log(`${doubleHouers} : ${doubleMinutes}`);
+// }
+// console.log(formatTime(70)); // "01:10"
+// console.log(formatTime(450)); // "07:30"
+// console.log(formatTime(1441)); // "24:01"
