@@ -285,3 +285,93 @@
 // console.log(formatTime(70)); // "01:10"
 // console.log(formatTime(450)); // "07:30"
 // console.log(formatTime(1441)); // "24:01"
+
+// використання циклу for...in для підбиття підсумку відгуків
+
+// const feadback = {
+//   good: 5,
+//   natural: 3,
+//   bad: 10,
+// };
+
+// let total = 0;
+
+// for (const sum in feadback) {
+//   total += feadback[sum];
+// }
+
+// console.log(total);
+
+// const keys = Object.keys(feadback);
+
+// for (const key of keys) {
+//   total += feadback[key];
+// }
+
+// console.log(total);
+
+// const values = Object.values(feadback);
+
+// for (const value of values) {
+//   total += value;
+// }
+// console.log(total);
+
+const user = {
+  name: 'Alice',
+  age: 20,
+  hobby: 'html',
+  premium: true,
+};
+
+const user2 = {
+  name: 'Artem',
+  age: 40,
+  hobby: 'css',
+  premium: false,
+};
+
+// user.mood = 'happy';
+// user.hobby = 'skydiving';
+// user.premium = false;
+
+// const keys = Object.keys(user);
+
+// for (const key of keys) {
+//   console.log(`${key} : ${user[key]}`);
+// }
+
+// function foo(obj) {
+//   obj.mood = 'happy';
+//   obj.hobby = 'skydiving';
+//   obj.premium = false;
+
+//   const keys = Object.keys(obj);
+
+//   for (const key of keys) {
+//     console.log(`${key} : ${obj[key]}`);
+//   }
+// }
+
+// foo(user);
+// foo(user2);
+
+// у нас є обєкт, де зберігаються зарплати нашої команди. Напишіть підсумування всіх зарплат і збережіть результат у змінній sum.
+// Повинно вийти 390. Якщо обєкт salaries порожній, то результат має бути 0.
+
+// const salaries = {
+//   Petro: 160,
+//   Yura: 150,
+//   Katarina: 80,
+// };
+
+// function summa(obj) {
+//   const values = Object.values(obj);
+//   let sum = 0;
+
+//   for (const item of values) {
+//     sum += item;
+//   }
+//   return sum;
+// }
+// console.log(summa(salaries));
