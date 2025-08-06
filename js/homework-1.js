@@ -317,19 +317,19 @@
 // }
 // console.log(total);
 
-const user = {
-  name: 'Alice',
-  age: 20,
-  hobby: 'html',
-  premium: true,
-};
+// const user = {
+//   name: 'Alice',
+//   age: 20,
+//   hobby: 'html',
+//   premium: true,
+// };
 
-const user2 = {
-  name: 'Artem',
-  age: 40,
-  hobby: 'css',
-  premium: false,
-};
+// const user2 = {
+//   name: 'Artem',
+//   age: 40,
+//   hobby: 'css',
+//   premium: false,
+// };
 
 // user.mood = 'happy';
 // user.hobby = 'skydiving';
@@ -375,3 +375,134 @@ const user2 = {
 //   return sum;
 // }
 // console.log(summa(salaries));
+// const friends = [
+//   { name: 'Ross', online: false },
+//   { name: 'Joey', online: true },
+//   { name: 'Chandler', online: false },
+//   { name: 'Phoebe', online: true },
+//   { name: 'Monica', online: true },
+//   { name: 'Rechel', online: false },
+// ];
+
+// Пошук друга за іменем
+
+// function findByName(allFriends, friendName) {
+//   for (const friend of allFriends) {
+//     if (friend.name.toLowerCase() === friendName.toLowerCase()) {
+//       return friend;
+//     }
+//   }
+
+//   return 'Not found';
+// }
+
+// console.log(findByName(friends, 'Joey'));
+
+// отримуємо імена всіх друзів
+
+// function getAllNames(allFriends) {
+//   const names = [];
+//   for (const item of allFriends) {
+//     names.push(item.name);
+//   }
+//   return names;
+// }
+// console.log(getAllNames(friends));
+// console.table(friends);
+
+// отримуємо імена тільки тих друзів, які зараз онлайн
+
+// const friends = [
+//   { name: 'Ross', online: false },
+//   { name: 'Joey', online: true },
+//   { name: 'Chandler', online: false },
+//   { name: 'Phoebe', online: true },
+//   { name: 'Monica', online: true },
+//   { name: 'Rechel', online: false },
+// ];
+
+// function getOnlineFriends(arr) {
+//   const names = [];
+
+//   for (const item of arr) {
+//     if (item.online) {
+//       names.push(item.name);
+//     }
+//   }
+//   return names;
+// }
+
+// console.log(getOnlineFriends(friends));
+
+// Напишіть функцію calcTotalPrice(stones, stoneName), яка приймає масив об'єктів та рядок з назвою каменю.
+// Функція рахує і повертає загальну вартість каміння з таким ім'ям, ціною та кількістю з об'єкта
+
+// const stones = [
+//   { name: 'Смарагд', price: 1300, quantity: 4 },
+//   { name: 'Діамант', price: 2700, quantity: 3 },
+//   { name: 'Сапфір', price: 400, quantity: 7 },
+//   { name: 'Щебінь', price: 200, quantity: 2 },
+// ];
+// calcTotalPrice(arr, stoneName){
+//   let sum = 0;
+//   for(const item of arr){
+//     if(item.name === stoneName){
+//       sum += item.price * item.quantity;
+//     }
+//   }
+// return sum;
+
+// }
+// console.log(calcTotalPrice(stones, "Сапфір"));
+
+// const playlist = {
+//   name: 'My pleylist',
+//   rating: 5,
+//   tracks: ['track-1', 'track-2', 'track-3'],
+//   changeName(arg) {
+//     playlist.name = arg;
+//   },
+// };
+
+// const playlist2 = {
+//   name: 'Sport playlist',
+//   rating: 4,
+//   track: ['track-4', 'track-5'],
+// };
+
+// playlist2.changeName2 = playlist.changeName;
+// playlist2.changeName2('black playlist');
+
+// changeName(arg){
+//   console.log(this);
+//   this.name = arg;
+
+// }
+
+// playlist2.changeName2("black playlist");
+// console.log("playlist2", playlist2);
+
+const playlist = {
+  name: 'My pleylist',
+  rating: 5,
+  tracks: ['track-1', 'track-2', 'track-3'],
+  changeName(arg) {
+    this.name = arg;
+  },
+  addTrack(newTrack) {
+    this.tracks.push(newTrack);
+  },
+  updateRating(newRating) {
+    this.rating = newRating;
+  },
+  getTrackCount() {
+    return this.tracks.length;
+  },
+};
+
+playlist.changeName('new playlist');
+playlist.addTrack('track-4');
+playlist.updateRating(4);
+console.log(playlist.getTrackCount());
+
+console.log(playlist);
