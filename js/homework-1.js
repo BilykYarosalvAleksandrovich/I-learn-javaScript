@@ -482,27 +482,103 @@
 // playlist2.changeName2("black playlist");
 // console.log("playlist2", playlist2);
 
-const playlist = {
-  name: 'My pleylist',
-  rating: 5,
-  tracks: ['track-1', 'track-2', 'track-3'],
-  changeName(arg) {
-    this.name = arg;
-  },
-  addTrack(newTrack) {
-    this.tracks.push(newTrack);
-  },
-  updateRating(newRating) {
-    this.rating = newRating;
-  },
-  getTrackCount() {
-    return this.tracks.length;
-  },
+// const playlist = {
+//   name: 'My pleylist',
+//   rating: 5,
+//   tracks: ['track-1', 'track-2', 'track-3'],
+//   changeName(arg) {
+//     this.name = arg;
+//   },
+//   addTrack(newTrack) {
+//     this.tracks.push(newTrack);
+//   },
+//   updateRating(newRating) {
+//     this.rating = newRating;
+//   },
+//   getTrackCount() {
+//     return this.tracks.length;
+//   },
+// };
+
+// playlist.changeName('new playlist');
+// playlist.addTrack('track-4');
+// playlist.updateRating(4);
+// console.log(playlist.getTrackCount());
+
+// console.log(playlist);
+
+// function calc(a, b, callback) {
+//   const res = callback(a, b);
+//   const result = res + '!';
+//   console.log(result);
+// }
+// function calc1(a, b) {
+//   const res = a - b;
+//   const result = res + '!';
+//   console.log(result);
+// }
+
+// calc(2, 3);
+// calc1(100, 50);
+
+// calc(2, 3, function (a, b) {
+//   return a + b;
+// });
+// calc(100, 80, function (lalala, tototo) {
+//   return lalala - tototo;
+// });
+// напишіть функцію each(array, callback), яка першим параметром очікує масив, а другим - функцію, яка застосовується до кожного елементу масиву
+// each повинна повернути новий масив, елементами якого будуть результати виклику коллбек.
+
+// function each(array, callback) {
+//   const newArr = [];
+//   for (const item of array) {
+//     newArr.push(callback(item));
+//   }
+//   return newArr;
+// }
+
+// console.log(
+//   each([64, 55, 90, 99, 300], function (value) {
+//     return value * 2;
+//   })
+// );
+
+// console.log(
+//   each([64, 55, 90, 99, 300], function (value) {
+//     return value / 2;
+//   })
+// );
+
+// стрілочна функція:
+
+// function foo(a, b, c) {
+//   return a + b + c;
+// }
+
+// const fooArrow = (a, b, c) => {
+//   return a + b + c;
+// };
+
+// console.log(fooArrow(10, 40, 50));
+
+// console.log(foo(1, 2, 3));
+
+// // неявне повернення:
+
+// const fooArrow = (a, b, c) => a + b + c;
+
+// console.log('fooArrow', fooArrow(33, 55, 99));
+
+const calculateAvarage = (...numbers) => {
+  let total = 0;
+
+  numbers.forEach(num => {
+    total += num;
+  });
+  return total / numbers.length;
 };
 
-playlist.changeName('new playlist');
-playlist.addTrack('track-4');
-playlist.updateRating(4);
-console.log(playlist.getTrackCount());
-
-console.log(playlist);
+console.log(calculateAvarage(1, 5, 3, 7, 10));
+console.log(calculateAvarage(1, 11, 3, 45, 10));
+console.log(calculateAvarage(1, 60, 3, 88, 20));
