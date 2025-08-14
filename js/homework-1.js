@@ -1191,3 +1191,34 @@
 // }, {});
 
 // console.log(obj);
+
+// function showThis() {
+//   console.log('this', this);
+//   console.log('userName', this.userName);
+// }
+
+// const user = {
+//   userName: Petya,
+// };
+
+// user.showUserThis = showThis;
+
+// user.showUserThis();
+// напишіть метод calcTotalPrice(stoneName), який приймає назву каменю, який розраховує та повертає загальну вартість каменів з таким імям кількістю з властивості stones
+
+// const chopShop = {
+//   stones: [
+//     { name: 'Emerald', price: 1300, quantity: 4 },
+//     { name: 'Diamond', price: 2700, quantity: 3 },
+//     { name: 'Sapphire', price: 1400, quantity: 7 },
+//     { name: 'Ruby', price: 800, quantity: 2 },
+//   ],
+//   calcTotalPrice(stoneName) {
+//     const stone = this.stone.find(item => item.name === stoneName);
+//     if (!stone) {
+//       return `${stoneName} not found`;
+//     }
+//     return stone.price * stone.quantity;
+//   },
+// };
+// console.log(chopShop.calcTotalPrice('Sapphire'));
