@@ -1346,3 +1346,16 @@
 
 // console.log(speedSensor.call(bmw, SPEED));
 // console.log(speedSensor.apply(audi, [SPEED]));
+
+class Car {
+  constructor(brand, model) {
+    this.brand = brand;
+    this.model = model;
+  }
+}
+
+const bmw = new Car('bmw', 'x5');
+const audi = new Car('audi', 'q8');
+
+console.log(bmw);
+console.log(audi);
