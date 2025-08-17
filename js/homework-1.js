@@ -1222,3 +1222,127 @@
 //   },
 // };
 // console.log(chopShop.calcTotalPrice('Sapphire'));
+
+// function showThis(a, b, arr) {
+//   console.log(a, b, arr);
+
+//   console.log('showThis', this);
+// }
+
+// const objA = {
+//   x: 5,
+//   y: 10,
+// };
+
+// showThis.call(objA, 5, 'Alice', [1, 12]);
+
+// метод apply передає масив
+// showThis.apply(objA, ["tototo", "lalala", [1,2,3]]);
+
+// function changeColor(color) {
+//   console.log('this', this);
+//   this.color = color;
+// }
+
+// const hat = {
+//   color: 'red',
+// };
+
+// const sweater = {
+//   color: 'blue',
+// };
+
+// changeColor.call(hat, 'green');
+// console.log(hat);
+
+// changeColor.apply(sweater, ['bleack']);
+// console.log(sweater);
+
+// const changeSweaterColor = changeColor.bind(sweater);
+
+// const changeHatColor = changeColor.bind(hat, 'rose');
+
+// changeHatColor('');
+
+// console.log(hat);
+
+// changeSweaterColor('black');
+// console.log(sweater);
+
+// const counter ={
+//   value: 0,
+//   increment (number){
+//     console.log("increment", this);
+//     this.value += number;
+
+//   },
+//   decrement(number){
+//     console.log("decrement", this);
+//     this.value -= number;
+
+//   }
+// }
+
+// function updateCounter(number ,callback){
+//   callback(number);
+// }
+
+// updateCounter (10, counter.increment.bind(counter));
+// updateCounter(5, counter.decrement.bind(counter));
+
+// console.log(counter);
+
+// наше завдання написати програмне забезпечення для автомобіля, а саме натискання кнопок набору та зниження швидкості.
+// Створити обєкти cruiseControl з методами accelerate та decrease, з властивостями speed and brand
+
+// const cruiseControl = {
+//   speed: 0,
+//   brand: 'Audi',
+//   accelerator() {
+//     this.speed += 10;
+//     console.log(
+//       `Автомобіль ${this.brand} прискорюєтьсяб, швидкість ${this.speed}`
+//     );
+//   },
+//   decrease() {
+//     if (this.speed <= 0) {
+//       console.log('Авто зупинилося');
+//       return;
+//     }
+//     this.speed -= 10;
+//     console.log(`Автомобіль ${this.brand} гальмує, швидкість ${this.speed}`);
+//   },
+// };
+
+// cruiseControl.accelerator();
+// cruiseControl.accelerator();
+
+// cruiseControl.decrease();
+// cruiseControl.decrease();
+// cruiseControl.decrease();
+
+// const SPEED = 60;
+
+// const bmw = {
+//   speed: 30,
+//   brand: 'bmw',
+// };
+
+// const audi = {
+//   speed: 90,
+//   brand: 'audi',
+// };
+
+// function speedSensor(maxSpeed) {
+// if (this.speed <= maxSpeed) {
+//   return `Авто ${this.brand} рухається з безпечною швидістю`;
+// }
+// return `Авто ${this.brand} перевищує швидкість`;
+
+//   return this.speed <= maxSpeed
+//     ? `Авто ${this.brand} рухається з безпечною швидістю`
+//     : `Авто ${this.brand} перевищує швидкість`;
+// }
+
+// console.log(speedSensor.call(bmw, SPEED));
+// console.log(speedSensor.apply(audi, [SPEED]));
