@@ -1347,15 +1347,59 @@
 // console.log(speedSensor.call(bmw, SPEED));
 // console.log(speedSensor.apply(audi, [SPEED]));
 
-class Car {
-  constructor(brand, model) {
-    this.brand = brand;
-    this.model = model;
-  }
-}
+// class Car {
+//   constructor(brand, model) {
+//     this.brand = brand;
+//     this.model = model;
+//   }
+// }
 
-const bmw = new Car('bmw', 'x5');
-const audi = new Car('audi', 'q8');
+// const bmw = new Car('bmw', 'x5');
+// const audi = new Car('audi', 'q8');
 
-console.log(bmw);
-console.log(audi);
+// console.log(bmw);
+// console.log(audi);
+
+// class Hero {
+//   constructor(obj) {
+//     this.name = obj.name;
+//     this.xp = obj.xp;
+//   }
+//   gainXp(amount) {
+//     console.log(`${this.name} received ${amount} xp`);
+//     this.xp += amount;
+//   }
+// }
+
+// class Paladin extends Hero {
+//   constructor(obj) {
+//     super({
+//       name: obj.name,
+//       xp: obj.xp,
+//     });
+//     this.weapon = obj.weapon;
+//   }
+//   attack() {
+//     console.log(`${this.name} attacks with ${this.weapon}`);
+//   }
+// }
+// const arthas = new Paladin({ name: 'Arthas', xp: 1000, weapon: 'pistols' });
+
+// arthas.gainXp(500);
+// console.log(arthas);
+// arthas.attack();
+
+// class Mag extends Hero{
+//   constructor(obj){
+//     super({
+// name: obj.name,
+// xp: obj.xp
+//     })
+//     this.spells = obj.spells;
+//   }
+// cast(){
+//   console.log(`${this.name} is casting a spell`);
+
+// }
+// }
+// const khadgar = new
