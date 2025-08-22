@@ -1403,3 +1403,247 @@
 // }
 // }
 // const khadgar = new
+/**
+ * Напиши клас Blogger для створення об'єкта блогера з наступними властивостями:
+ * - email - пошта, рядок
+ * - age - вік, число
+ * - numberOfPosts - кількість постів, число
+ * - topics - масив тем на яких спеціалізується блогер
+ *
+ * Клас чекає один параметр - об'єкт налаштувань з однойменними властивостями.
+ *
+ * - Додай метод getInfo(), який, повертає рядок:
+ *    User ${email} is ${age} years old and has ${numPosts} posts.
+ *
+ * - Додай метод updatePostCount(value), який у параметрі value
+ *    приймає кількість постів, які потрібно додати користувачеві.
+ */
+
+// class Blogger {
+//   constructor(obj) {
+//     this.email = obj.email;
+//     this.age = obj.age;
+//     this.numberOfPosts = obj.numberOfPosts;
+//   }
+//   getInfo() {
+//     return `User ${this.email} is ${this.age} years old and has ${this.numberOfPosts} posts.`;
+//   }
+//   updatePostCount(value) {
+//     this.numberOfPosts += value;
+//   }
+// }
+
+// const alice = new Blogger({
+//   email: 'alice@gmail.com',
+//   age: 25,
+//   numberOfPosts: 40,
+//   topics: ['gaming', 'tech'],
+// });
+// console.log(alice.getInfo);
+// alice.updatePostCount(5);
+// console.log(alice);
+
+/**
+ * Напиши клас User який створює об'єкт із властивостями login та email.
+ * Оголоси приватні властивості #login та #email, доступ до яких зроби через
+ * гетер та сетер login та email.
+ */
+
+// class User {
+//   #login;
+//   #email;
+
+//   constructor(obj) {
+//     this.#email = obj.email;
+//     this.#login = obj.login;
+//   }
+//   get login() {
+//     return this.#login;
+//   }
+//   set login(newLogin) {
+//     this.#login = newLogin;
+//   }
+
+//   get email() {
+//     return this.#email;
+//   }
+//   set email(newEmail) {
+//     this.#email = newEmail;
+//   }
+// }
+// const yura = new User({
+//   email: 'yura@gmail.com',
+//   login: 'yura',
+// });
+
+// DOM
+// Пошук HTML елементу за допомогою querySelector() та querySelectorAll();
+// за назвою тегу
+// за назвою класу
+// за ID
+
+// const magicBtn = document.querySelector('#magic-btn');
+
+// const navEl = document.querySelector('.site-nav');
+
+// const nav = document.querySelector('ul');
+
+// const navLinksEl = document.querySelectorAll('.site-nav_link');
+
+// console.log(nav);
+
+// Властивості навігації по DOM-вузлах
+
+// const nav = document.querySelector('.site-nav');
+// console.log(nav.children);
+
+// console.log(nav.firstElementChild);
+// console.log(nav.lastElementChild);
+
+// const navItem = nav.children[1];
+// console.log(navItem);
+// console.log(navItem.nextElementSibling);
+// console.log(navItem.previousElementSibling);
+
+// console.log(navItem.parentNode);
+
+// Властивості елемента (hero)
+// Зображення
+// Текст та textContent
+// https://images.pixels.com/photos/1870376/pexels-photo-1870376.jpg
+
+// const imgEl = document.querySelector('.hero-image');
+
+// imgEl.src = 'https://images.pixels.com/photos/1870376/pexels-photo-1870376.jpg';
+// imgEl.alt = 'New cat';
+
+// const heroTitle = document.querySelector('.hero-title');
+
+// heroTitle.textContent = 'We are the chempion';
+
+// Атрибути
+// get(ім'я - атрибута)
+//   set(ім'я - атрибута)
+//     remove(ім'я - атрибута)
+//       has(ім'я - атрибута)
+
+// const imgEl = document.querySelector('.hero-img');
+
+// console.log(imgEl.src);
+// console.log(imgEl.getAttribute('src'));
+// imgEl.setAttribute("width", 500);
+
+// imgEl.removeAttribute("width");
+
+// console.log(imgEl.hasAttribute('src'));
+
+// Data - атрибути
+
+// const actions = document.querySelectorAll('.actions button');
+
+// console.log(actions[2].dataset.action);
+// для того щоб присвоїти значення, потрібно:
+
+// actions[0].dataset.btn = "newDivide";
+
+// delete actions[0].dataset.btn;
+
+// remove
+// toggle
+// replace
+// contains
+
+// const currentPageUrl = '/contact';
+
+// const linkEl = document.querySelector(`.site-nav_link[href="/contact"]`);
+// можна також використовувати інший запис:
+// const linkEl = document.querySelector(`.site-nav_link[href=${currentPageUrl}]`);
+// console.log(linkEl);
+
+// linkEl.classList.add("site-nav_link--current");
+
+// linkEl.classList.remove("site-nav_link--current");
+
+// linkEl.classList.toggle('site-nav_link--current');
+
+// linkEl.classList.replace('site-nav_link--current', 'blue');
+
+// console.log(linkEl.classList.contains("brubr"));
+
+// Додавання елементів
+
+// Створення та додавання елементів
+
+// Створюємо заголовок
+
+// const titleEl = document.createElement('h1');
+
+// titleEl.classList.add('page-title');
+
+// titleEl.textContent = 'Wery beautiful day with';
+
+// document.body.append(titleEl);
+
+// document.body.prepend(titleEl);
+
+// console.log(titleEl);
+
+// Створюємо зображення
+
+// https://cdn.pixabay.com/photo/2018/07/26/07/45/valais-3562988
+// valais-alpine-mountains-glacier
+
+// const imgEl = document.createElement('img');
+
+// imgEl.src = "https://cdn.pixabay.com/photo/2018/07/26/07/45/;
+// imgEl.alt = "valais-alpine-mountains-glacier";
+// imgEl.width = 320;
+
+// const heroEl = document.querySelector(".hero");
+
+// heroEl.append(titleEl, imgEl);
+
+// створюємо та додаємо новий пункт меню
+
+// const navItem = document.createElement("li");
+// navItemEl.classList.add(".site-nav_item");
+
+// const navLinkEl = document.createElement("a");
+// navLinkEl.classList.add("site-nav_link");
+// navLinkEl.href = "/profile";
+// navLinkEl.textContent = "Profile";
+
+// navItemEl.append(navLinkEl);
+
+// const navEl = document.querySelector(".site-nav");
+
+// navEl.append(navItemEl);
+
+/*
+ * Створюємо та додаємо колекцію
+ */
+const options = [
+  { label: 'червоний', color: '#F44336' },
+  { label: 'зелений', color: '#4CAF50' },
+  { label: 'синій', color: '#2196F3' },
+  { label: 'сірий', color: '#607D8B' },
+  { label: 'рожевий', color: '#E91E63' },
+  { label: 'індіго', color: '#3F51B5' },
+];
+
+const colorPickerContainerEl = document.querySelector('.color-picker');
+
+// const elements = options.map(item => {
+//   const buttonEl = document.createElement('button');
+//   buttonEl.classList.add('color-picker--option');
+//   buttonEl.textContent = item.label;
+//   buttonEl.style.backgroundColor = item.color;
+
+//   return buttonEl;
+// });
+
+// console.log(elements);
+
+// colorPickerContainerEl.append(...elements);
+
+// Пишемо функцію для створення розмітки колорпікера
