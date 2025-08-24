@@ -1619,19 +1619,19 @@
 
 // navEl.append(navItemEl);
 
-/*
- * Створюємо та додаємо колекцію
- */
-const options = [
-  { label: 'червоний', color: '#F44336' },
-  { label: 'зелений', color: '#4CAF50' },
-  { label: 'синій', color: '#2196F3' },
-  { label: 'сірий', color: '#607D8B' },
-  { label: 'рожевий', color: '#E91E63' },
-  { label: 'індіго', color: '#3F51B5' },
-];
+// /*
+//  * Створюємо та додаємо колекцію
+//  */
+// const options = [
+//   { label: 'червоний', color: '#F44336' },
+//   { label: 'зелений', color: '#4CAF50' },
+//   { label: 'синій', color: '#2196F3' },
+//   { label: 'сірий', color: '#607D8B' },
+//   { label: 'рожевий', color: '#E91E63' },
+//   { label: 'індіго', color: '#3F51B5' },
+// ];
 
-const colorPickerContainerEl = document.querySelector('.color-picker');
+// const colorPickerContainerEl = document.querySelector('.color-picker');
 
 // const elements = options.map(item => {
 //   const buttonEl = document.createElement('button');
@@ -1647,3 +1647,139 @@ const colorPickerContainerEl = document.querySelector('.color-picker');
 // colorPickerContainerEl.append(...elements);
 
 // Пишемо функцію для створення розмітки колорпікера
+
+// const makePickerOption = arr => {
+//   return arr.map(item => {
+//     const buttonEl = document.createElement('button');
+//     buttonEl.classList.add('color-picker--option');
+//     buttonEl.textContent = item.label;
+//     buttonEl.style.backgroundColor = item.color;
+
+//     return buttonEl;
+//   });
+// };
+
+// colorPickerContainerEl.append(...makePickerOption(options));
+
+// Властивість innerHTML
+// зчитування
+// запис
+
+// const titleEl = document.querySelector('.title');
+
+// titleEl.innerHTML = '<a href=' / '>HOME PAGE</a>';
+// titleEl.innerHTML = ""; це щоб очистити зміст.
+
+// titleEl.insertAdjacentHTML('beforeend', '<a href=' / '>HOME PAGE</a>');
+
+// Задачка таблиця, додаємо значення в таблицю
+
+// const creatMarkup = arr => {
+//   return arr
+//     .map((item) => `
+//       <tr>
+//         <td>${item.id}</td>
+//         <td>${item.amount}</td>
+//         <td>${item.data}</td>
+//         <td>${item.business}</td>
+//         <td>${item.type}</td>
+//         <td>${item.name}</td>
+//         <td>${item.account}</td>
+//       </tr>
+//     `)
+//     .join('');
+// };
+
+// console.log(creatMarkup(transactionHistory));
+
+// tableEl.insertAdjacentHTML('beforeend', creatMarkup(transactionHistory));
+
+// подія click
+// натискаючи на кнопку "click me" змусь
+// червоний квадратик зміщуватися на 50px по діагоналі
+
+// const btnEl = document.querySelector(".js-click");
+// const boxEl = document.querySelector(".js-box");
+
+// btnEl.addEventListener("click", () => {
+//   console.log("ok");
+
+// })
+
+// btnEl.addEventListener("click", handleClick);
+
+// let step = 0;
+
+// function handleClick(){
+//   step +=50;
+
+//   boxEl.style.marginTop = `${step}px`;
+//   boxEl.style.marginLeft = `${step}px`;
+
+// }
+
+// подія input
+// подія blur
+
+// виводь в консоль все що користувач вводить в input
+
+// const userName = document.querySelector('.js-user-name');
+
+// userName.addEventListener('change', handleChange);
+
+// function handleChange() {
+//   console.log('ok');
+// }
+// userName.addEventListener('input', handleInput);
+
+// function handleInput(event) {
+//   console.log(event.target.value);
+// }
+
+// подія submit
+// Дії браузера за замовчуванням
+// Властивість elements
+
+// Оброби форму та збери відгук користувача в об'єкт
+
+// const form = document.querySelector('.js-form');
+
+// form.addEventListener('submit', handlerSubmit);
+
+// function handlerSubmit(event) {
+//   event.preventDefault();
+
+//   // console.log(event);
+
+//   const elements = event.target.elements;
+
+//   const info = {
+//     email: elements.email.value,
+//     password: elements.password.value,
+//     comment: elements.comment.value,
+//   };
+//   console.log(info);
+//   event.target.reset();
+// }
+// Типи подій: keypress, keydown, keyup
+// Обмеження keypress
+// Властивості key та code
+
+// document.addEventListener("keypress", handleKeyPress);
+
+// fucntion handleKeyPress(event){
+//   console.log(event.key);
+
+// }
+
+// Обробка комбінацій клавіш
+
+// document.addEventListener("keydown", handleKeyPress);
+
+// function handleKeyPress(event){
+//   if(event.ctrlKey && event.code === "KeyC"){
+//     console.log("ok");
+//     event.preventDefault();
+//   }
+
+// }
