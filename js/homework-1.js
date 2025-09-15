@@ -1783,3 +1783,30 @@
 //   }
 
 // }
+
+// const LS_KEY = 'Array of names';
+// const names = ['Allice', 'Kate', 'Emma'];
+
+// // щоб зробити масив в JSON
+// localStorage.setItem(LS_KEY, JSON.stringify(names));
+// // щоб розпарсити
+// const values = localStorage.getItem(LS_KEY);
+
+// console.log(JSON.parse(values));
+
+// Видалення
+
+// localStorage.removeItem(LS_KEY);
+// localStorage.clear();
+// метод window.setTimeout (callback, delay, args)
+console.log('before');
+
+setTimeout(() => {
+  console.log('timeout-1');
+}, 1000);
+
+setTimeout(() => {
+  console.log('timeout-2');
+}, 2000);
+
+console.log('after');
